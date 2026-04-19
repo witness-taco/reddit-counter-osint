@@ -1,5 +1,7 @@
 =working as of 19 Apr 2026 - 349 comments deleted in one session. no penalties=
 
+USE V4_hardened_reddit_active_learner.py
+
 # Reddit Comment Deletion Script
 
 A heavily rate-limited, Human-in-the-Loop (HITL) orchestrator designed to delete your reddit comments
