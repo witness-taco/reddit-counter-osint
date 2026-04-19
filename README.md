@@ -1,13 +1,30 @@
-=working as of 19 Apr 2026 - 349 comments deleted in one session. no penalties=
+=working as of 19 Apr 2026=
 
-USE V4_hardened_reddit_active_learner.py
+ _349 comments deleted in one session. no penalties_
+
+**USE V4_hardened_reddit_active_learner.py**
+
+
 
 # Reddit Comment Deletion Script
 
 A heavily rate-limited, Human-in-the-Loop (HITL) orchestrator designed to delete your reddit comments
 
-There are many mass-deletion scripts available, but most rely on bulk API calls that trigger immediate shadowbans or rate limits. This tool does not prioritize speed; it prioritizes operational security and reliability.
+Built for simplicity without relying on bulk API calls that trigger immediate shadowbans. 
+
+It's not fast by design - but reliable. It could easily run headless/cronjob but I chose to have more control and QA for now. 
+
 Uses synthetic Chrome DevTools Protocol (CDP) interactions, spatial jitter, and randomized human pacing, to operate entirely beneath standard anti-bot telemetry thresholds
+
+---
+
+<img width="933" height="869" alt="image" src="https://github.com/user-attachments/assets/7cc10f5a-11f8-4d8a-ae13-750b590d0e4e" />
+
+
+It will save successful trainings andd be able to pull it up the next time you run the script. 
+
+Asks if you want to run the automation on re-train
+
 
 ---
 
@@ -20,6 +37,7 @@ Building a resilient DOM interaction agent against Reddit's modern frontend ("Sh
 * **Modal Obfuscation & Coordinate Puppeteering:** Final confirmation modals lack reliable selectors and disable `autofocus` to trap keyboard bypasses. We shifted to a Viewport-Relative coordinate system, allowing the agent to target elements regardless of window resizing.
 * **Spatial Jitter & State Memory:** Repeatedly clicking the exact same pixel guarantees a ban. The active learning phase now requires the user to drag a bounding box over the target area. The agent calculates a randomized "strike zone," clicking a different pixel within that box every cycle. Telemetry is preserved in `reddit_agent_memory.json` to bypass retraining on future runs.
 * **Kernel Interception:** Because the script requires deep 10-15 second delays to outwait Reddit's CDN cache, making mid-execution adjustments was difficult. We hijacked the native OS `SIGINT` command. Pressing `Ctrl+C` now acts as a graceful human override, pausing the loop without dropping the browser.
+
 
 ---
 
