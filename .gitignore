@@ -1,0 +1,22 @@
+# Virtual Environments
+venv/
+env/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Project specific telemetry and memory (DO NOT COMMIT)
+agent_training_metrics.json
+reddit_agent_memory.json
+reddit_agent_memory_backup_*.json
+
+# Local browser profile data
+.config/
+nodriver_reddit_profile/
+
+# OS generated files
+.DS_Store
+Thumbs.db
