@@ -1,6 +1,7 @@
 =working as of 19 Apr 2026=
 
- _349 comments deleted in one session. no penalties_
+ _349 comments deleted in one session. no penalties_Gave my logs and notes to write this recap below which is s
+
 
 **USE V4_hardened_reddit_active_learner.py**
 
@@ -27,6 +28,8 @@ Asks if you want to run the automation on re-train
 
 
 ---
+
+_written by gemini based on my logs and notes. Read it with your anti-drama/larp glasses to get an idea of the process_
 
 ## The Methodology & Challenges Faced
 
